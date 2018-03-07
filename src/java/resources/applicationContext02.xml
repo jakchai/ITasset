@@ -6,7 +6,7 @@
   
   <!-- Instantiates a Shape by calling the empty constructor
        and then calling setter methods. -->
-  <bean id="shape1" class="coreservlets.Rectangle">
+  <bean id="shape1" class="coreservlets02.Rectangle">
     <property name="length" value="10"/>
     <property name="width" value="20"/>
   </bean>
@@ -16,7 +16,7 @@
        constructor args with compatible types. Use index and 
        type when there are multiple constructors with the  
        same number of args. -->
-  <bean id="shape2" class="coreservlets.Circle">
+  <bean id="shape2" class="coreservlets02.Circle">
     <constructor-arg value="10"/>
   </bean>
   
@@ -24,7 +24,7 @@
        factory method. Note that the class here is not
        the class of the bean, but the class that holds
        the static method. -->
-  <bean id="shape3" class="coreservlets.ShapeMaker"
+  <bean id="shape3" class="coreservlets02.ShapeMaker"
         factory-method="randomShape1">
   </bean>
   
@@ -32,7 +32,7 @@
        that takes an argument. Note that "constructor-arg"
        is misnamed; in the case of factory-method, it
        refers to the argument passed to the static method. -->
-  <bean id="shape4" class="coreservlets.ShapeMaker"
+  <bean id="shape4" class="coreservlets02.ShapeMaker"
         factory-method="randomShape2">
     <constructor-arg value="100"/>
   </bean>
@@ -41,21 +41,21 @@
        with the bean named shape1 as an argument.
        You can also nest bean references inside constructor-arg
        or property. -->
-  <bean id="shapeList1" class="coreservlets.ShapeList">
+  <bean id="shapeList1" class="coreservlets02.ShapeList">
     <constructor-arg ref="shape1"/>
   </bean>
   
   <!-- Instantiates a ShapeList by calling a constructor
        with a list of beans as an argument. -->
-  <bean id="shapeList2" class="coreservlets.ShapeList">
+  <bean id="shapeList2" class="coreservlets02.ShapeList">
     <constructor-arg>
       <list>
         <ref local="shape2"/>
-        <bean class="coreservlets.RightTriangle">
+        <bean class="coreservlets02.RightTriangle">
           <property name="sideA" value="5"/>
           <property name="sideB" value="10"/>
         </bean>
-        <bean class="coreservlets.Circle">
+        <bean class="coreservlets02.Circle">
           <constructor-arg value="25"/>
         </bean>
       </list>

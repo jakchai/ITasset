@@ -22,11 +22,11 @@
 
     <!-- ADD PERSISTENCE SUPPORT HERE (jpa, hibernate, etc) -->
     
-  <bean id="shape1" class="coreservlets.Rectangle">
+  <bean id="shape1" class="coreservlets01.Rectangle">
     <property name="length" value="10"/>
     <property name="width" value="20"/>
   </bean>
-  <bean id="shape2" class="coreservlets.Circle">
+  <bean id="shape2" class="coreservlets01.Circle">
     <constructor-arg value="10"/>
   </bean>       
 
