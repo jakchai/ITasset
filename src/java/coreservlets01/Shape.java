@@ -1,4 +1,4 @@
-package coreservlets;
+package coreservlets01;
 
 /** Main interface. Note that you do not always have to use interfaces
  *  when you use Spring. If there is definitely exactly one concrete

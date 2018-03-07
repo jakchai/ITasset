@@ -1,4 +1,4 @@
-package coreservlets;
+package coreservlets01;
 
 import org.springframework.context.*;
 import org.springframework.context.support.*;

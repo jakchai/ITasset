@@ -1,4 +1,4 @@
-package coreservlets;
+package coreservlets01;
 
 /** A concrete version of Shape. If the code that uses this needs only
  *  the area or methods that are inherited from Object, it should
