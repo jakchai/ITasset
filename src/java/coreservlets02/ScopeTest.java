@@ -23,7 +23,7 @@ public class ScopeTest {
   public static void singletonTest1(String beanName) {
     ApplicationContext context =
       new ClassPathXmlApplicationContext
-                            ("/scope-test.xml");
+                            ("/resources/scope-test02.xml");
     Rectangle r1 = 
       (Rectangle)context.getBean(beanName);
     Rectangle r2 = 
@@ -44,12 +44,12 @@ public class ScopeTest {
   public static void singletonTest2(String beanName) {
     ApplicationContext context1 =
       new ClassPathXmlApplicationContext
-                            ("/scope-test.xml");
+                            ("/resources/scope-test02.xml");
     Rectangle r1 = 
       (Rectangle)context1.getBean(beanName);
     ApplicationContext context2 =
       new ClassPathXmlApplicationContext
-                            ("/scope-test.xml");
+                            ("/resources/scope-test02.xml");
     Rectangle r2 = 
       (Rectangle)context2.getBean(beanName);
     compareRectangles(r1, r2);

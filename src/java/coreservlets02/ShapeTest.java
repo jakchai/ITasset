@@ -14,7 +14,7 @@ public class ShapeTest {
   public static void main(String[] args) {
     ApplicationContext context =
       new ClassPathXmlApplicationContext
-                            ("/applicationContext.xml");
+                            ("/resources/applicationContext02.xml");
     for(int i=1; i<=4; i++) {
       Shape shape = (Shape)context.getBean("shape" + i);
       shape.printInfo();
